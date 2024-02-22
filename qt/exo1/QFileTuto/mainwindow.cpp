@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_writePushButton_clicked()
 {
-    QFile f("file:///home/raphael/Desktop/programmation/qt/exo1/myTesteFile.txt");
+    QFile f("/home/raphael/Desktop/programmation/qt/exo1/myTesteFile.txt");
 
     if(!f.open(QFile::WriteOnly | QFile::Text)){
         QMessageBox::warning(this,"warning","Error");
