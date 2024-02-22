@@ -20,6 +20,8 @@ public:
 private slots:
     void on_writePushButton_clicked();
 
+    void on_readPushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

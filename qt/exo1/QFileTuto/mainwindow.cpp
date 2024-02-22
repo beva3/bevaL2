@@ -32,3 +32,21 @@ void MainWindow::on_writePushButton_clicked()
     f.close();
 }
 
+
+void MainWindow::on_readPushButton_clicked()
+{
+    QFile f("/home/raphael/Desktop/programmation/qt/exo1/myTesteFile.txt");
+
+    if(!f.open(QFile::ReadOnly | QFile::Text)){
+        QMessageBox::warning(this,"warning","Error");
+    }else{
+        QTextStream in(&f);
+        QString text = in.readAll();
+        ui->plainTextEdit->setPlainText(text);
+        //f.flush();
+        QMessageBox::information(this,"information","successful");
+    }
+    f.close();
+
+}
+
