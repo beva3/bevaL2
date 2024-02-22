@@ -1,8 +1,11 @@
 #!/bin/bash
 
-function hello(){
-    echo "hello"
-}
+while [[ 1 ]]; do
+    echo -n "Are you agree ? " 
+    read -r answer
+    if [[ $answer == "y" ]]; then
+        break
+    fi 
+done
 
-
-hello
+echo "bye bye"
