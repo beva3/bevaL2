@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="~/Bureau/programmation/delete">
+    <file>delete.jpg</file>
+  </qresource>
+</RCC>
