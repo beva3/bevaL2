@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>401</width>
-    <height>393</height>
+    <width>395</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,29 +16,21 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(177, 177, 177);
-color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="plainText">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPlainTextEdit" name="plainTextEdit"/>
+      </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QPushButton" name="Write">
+         <widget class="QPushButton" name="writePushButton">
           <property name="text">
            <string>Write</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="readPushButton">
           <property name="text">
            <string>Read</string>
           </property>
@@ -55,7 +47,7 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>401</width>
+     <width>395</width>
      <height>21</height>
     </rect>
    </property>

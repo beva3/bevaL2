@@ -27,11 +27,11 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_2;
-    QPlainTextEdit *plainTextEdit;
     QVBoxLayout *verticalLayout;
+    QPlainTextEdit *plainTextEdit;
     QHBoxLayout *horizontalLayout;
-    QPushButton *Write;
-    QPushButton *pushButton;
+    QPushButton *writePushButton;
+    QPushButton *readPushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -39,31 +39,29 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(401, 393);
+        MainWindow->resize(395, 377);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout_2 = new QVBoxLayout(centralwidget);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        plainTextEdit = new QPlainTextEdit(centralwidget);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(177, 177, 177);\n"
-"color: rgb(0, 0, 0);"));
-
-        verticalLayout_2->addWidget(plainTextEdit);
-
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        plainTextEdit = new QPlainTextEdit(centralwidget);
+        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+
+        verticalLayout->addWidget(plainTextEdit);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        Write = new QPushButton(centralwidget);
-        Write->setObjectName(QString::fromUtf8("Write"));
+        writePushButton = new QPushButton(centralwidget);
+        writePushButton->setObjectName(QString::fromUtf8("writePushButton"));
 
-        horizontalLayout->addWidget(Write);
+        horizontalLayout->addWidget(writePushButton);
 
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        readPushButton = new QPushButton(centralwidget);
+        readPushButton->setObjectName(QString::fromUtf8("readPushButton"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(readPushButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -74,7 +72,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 401, 21));
+        menubar->setGeometry(QRect(0, 0, 395, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -88,9 +86,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        plainTextEdit->setPlainText(QString());
-        Write->setText(QCoreApplication::translate("MainWindow", "Write", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Read", nullptr));
+        writePushButton->setText(QCoreApplication::translate("MainWindow", "Write", nullptr));
+        readPushButton->setText(QCoreApplication::translate("MainWindow", "Read", nullptr));
     } // retranslateUi
 
 };
