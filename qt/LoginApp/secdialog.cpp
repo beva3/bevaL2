@@ -1,14 +1,14 @@
 #include "secdialog.h"
 #include "ui_secdialog.h"
 
-secDialog::secDialog(QWidget *parent)
+SecDialog::SecDialog(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::secDialog)
+    , ui(new Ui::SecDialog)
 {
     ui->setupUi(this);
 }
 
-secDialog::~secDialog()
+SecDialog::~SecDialog()
 {
     delete ui;
 }

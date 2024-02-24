@@ -4,19 +4,19 @@
 #include <QDialog>
 
 namespace Ui {
-class secDialog;
+class SecDialog;
 }
 
-class secDialog : public QDialog
+class SecDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit secDialog(QWidget *parent = nullptr);
-    ~secDialog();
+    explicit SecDialog(QWidget *parent = nullptr);
+    ~SecDialog();
 
 private:
-    Ui::secDialog *ui;
+    Ui::SecDialog *ui;
 };
 
 #endif // SECDIALOG_H

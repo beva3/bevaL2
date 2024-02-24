@@ -23,6 +23,9 @@ void MainWindow::on_pushButton_login_clicked()
 
     if(username == "test" && passwd == "test"){
         QMessageBox::information(this,"information","successful");
+        hide();
+        secDialog = new SecDialog(this);
+        secDialog->show();
     }else{
         QMessageBox::warning(this,"warning","again");
     }
