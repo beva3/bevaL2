@@ -1,10 +1,15 @@
+#include <cstdlib>
 #include <iostream>
 #include <iterator>
 #include <ostream>
+#include <ctime>
 
 
 int main(){
-   int mysteryNumber = 75;
+//   int mysteryNumber = 75;
+    std::srand(time(nullptr));
+   int mysteryNumber = std::rand() % 100;
+   std::cout << "MysteryNumber = " << mysteryNumber << std::endl;
    int maxTry = 6;
    int number = 0;
 
