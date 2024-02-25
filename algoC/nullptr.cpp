@@ -10,6 +10,10 @@ void allouArray(int *array, int size){
     array = new int[size];
 }
 
+void  initArray(int *array , int value){
+    array[0] = value;
+}
+
 void displayArray(int *array){
     int i = 0;
     while (array[i]) {
@@ -22,11 +26,16 @@ void displayArray(int *array){
 
 int main(){
     int *ptr = nullptr;//pointeur sur int
+    int a = 12;
     std::cout << ptr << std::endl;
-   
-    //std::cout << *ptr << std::endl; // segmentation fault  satria pas d'allocation
-    
-    
+    ptr = &a;
 
+    //std::cout << *ptr << std::endl;   // segmentation fault  satria pas d'allocation
+    std::cout << "ptr = "<<ptr << std::endl;      // display the adress of a
+    std::cout << "a   = "<<&a << std::endl;      // display the adress of a
+    std::cout << "*ptr= " <<*ptr << std::endl;     // display the value of a
+    std::cout << "*a  = " <<a << std::endl;     // display the value of a
+    
+ 
     return 0;
 }
