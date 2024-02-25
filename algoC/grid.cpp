@@ -26,6 +26,12 @@ int main(){
     defaulteValue(grid, {5,5}, 3);
     dislayGrid(grid, {5,5});
 
+    
+    for(int i = 0 ; i< y ; i++){
+        delete[] grid[i];
+    }
+    delete [] grid;
+    
     return 0;
 }
 
